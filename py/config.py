@@ -43,9 +43,6 @@ class Config:
     conversion = "RGB"
 
     exclude_classes = (
-        #261,
-        #6,
-        #57,
         155,
         194,
         62,
@@ -59,17 +56,6 @@ class Config:
     )
 
     min_points_in_contour = 90
-
-    # def prepare(self, path, **kwargs):
-    #     img = Image.open(path).copy()
-    #     img.thumbnail(self.size, Image.NEAREST)
-    #     # img = img.crop(self.__crop(img))
-    #     # if kwargs.get('conversion_mode'):
-    #     #     img = img.convert(kwargs.get('conversion_mode'))
-    #     # img = img.filter(ImageFilter.CONTOUR)
-    #
-    #     return img
-    #     # return get_colors(img)
 
     def prepare(self, path, **kwargs):
         img = cv2.imread(path)
